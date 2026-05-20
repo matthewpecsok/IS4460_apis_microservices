@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>Employee System Dashboard</h1><p>This is the most protected system. External candidates should never access these pages or APIs directly.</p><p>Employee profiles: {{ employee_count }}</p><p><a class="btn btn-primary" href="{% url 'employee_system:employee_list' %}">View Employees</a></p>{% endblock %}

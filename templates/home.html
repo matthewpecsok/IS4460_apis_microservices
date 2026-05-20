@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="p-4 bg-light rounded">
+  <h1>Three Business Systems in One Django Project</h1>
+  <p>This teaching app simulates HR, an external job site, and an internal employee system. Each has regular HTML pages, and the systems also communicate through simple REST APIs.</p>
+  <p>Start with <a href="{% url 'external_jobs:public_job_list' %}">Public Jobs</a>, or log in as <strong>hr_user</strong>, <strong>employee_user</strong>, or <strong>admin</strong> after running the seed command.</p>
+</div>
+{% endblock %}

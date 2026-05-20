@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1>Login</h1>
+<p>Sample users after seeding: hr_user, employee_user, admin. Password for all: <code>password123</code></p>
+<form method="post" class="card card-body" style="max-width: 420px;">{% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-primary">Login</button>
+</form>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}HR Dashboard{% endblock %}{% block content %}
+<h1>HR System Dashboard</h1><p>This protected system is where HR creates jobs, approves postings, reviews applications, and sends hired candidates to the employee system.</p>
+<div class="row"><div class="col"><div class="card card-body">Jobs: {{ job_count }}</div></div><div class="col"><div class="card card-body">Applications: {{ application_count }}</div></div><div class="col"><div class="card card-body">Hired: {{ hired_count }}</div></div></div>
+<p class="mt-3"><a class="btn btn-primary" href="{% url 'hr:job_create' %}">Create Job</a> <a class="btn btn-outline-primary" href="{% url 'hr:job_list' %}">Manage Jobs</a> <a class="btn btn-outline-primary" href="{% url 'hr:application_list' %}">Review Applications</a></p>
+{% endblock %}

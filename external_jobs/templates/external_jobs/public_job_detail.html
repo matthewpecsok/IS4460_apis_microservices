@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>{{ job.title }}</h1><p><strong>Department:</strong> {{ job.department }}</p><div class="border rounded p-3">{{ job.description|linebreaks }}</div><p class="mt-3"><a class="btn btn-primary" href="{% url 'external_jobs:apply' job.pk %}">Apply</a></p>{% endblock %}
