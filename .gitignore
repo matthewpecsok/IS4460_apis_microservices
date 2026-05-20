@@ -20,8 +20,5 @@ pip-wheel-metadata/
 staticfiles/
 media/
 
-# VS Code
-.vscode/
-
 # Environment variables
 .env
