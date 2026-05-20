@@ -1,0 +1,28 @@
+# Python virtual environment
+.venv/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest
+.pytest_cache/
+
+# Distribution / packaging
+*.egg-info/
+pip-wheel-metadata/
+
+# Django
+*.log
+*.pot
+*.pyc
+staticfiles/
+media/
+db.sqlite3
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
