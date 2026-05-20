@@ -4,7 +4,7 @@ from django.conf import settings
 
 
 def create_employee_from_application(application):
-    url = settings.BASE_URL.rstrip('/') + '/employees/api/employees/'
+    url = settings.EMPLOYEE_SYSTEM_BASE_URL.rstrip('/') + '/employees/api/employees/'
     token = os.getenv('EMPLOYEE_SYSTEM_API_TOKEN', settings.EMPLOYEE_SYSTEM_API_TOKEN)
     parts = application.candidate_name.split()
     first_name = parts[0]

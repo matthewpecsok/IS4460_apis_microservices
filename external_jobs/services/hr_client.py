@@ -9,7 +9,7 @@ def send_application_to_hr(application):
     This intentionally uses a simple static token for class readability. Real
     external partners should use stronger authentication and rate limiting.
     """
-    url = settings.BASE_URL.rstrip('/') + '/hr/api/applications/'
+    url = settings.HR_BASE_URL.rstrip('/') + '/hr/api/applications/'
     token = os.getenv('HR_API_TOKEN', settings.HR_API_TOKEN)
     payload = {
         'hr_job_id': application.external_job.hr_job_id,

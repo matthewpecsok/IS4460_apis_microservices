@@ -34,6 +34,8 @@ python manage.py seed_demo_data
 python manage.py runserver 0.0.0.0:8000
 ```
 
+The project automatically loads `.env` if present using `python-dotenv`. The example file is ignored by git, so you can safely keep environment-specific values local.
+
 In Codespaces, open the forwarded port for port 8000.
 
 ## Sample users
@@ -61,6 +63,17 @@ HR_API_TOKEN=class-hr-token
 EXTERNAL_JOBS_API_TOKEN=class-external-jobs-token
 EMPLOYEE_SYSTEM_API_TOKEN=class-employee-system-token
 ```
+
+You can also point each system at a different host using separate base URL env vars:
+
+```text
+BASE_URL=http://127.0.0.1:8000
+HR_BASE_URL=http://hr-service.local:8000
+EXTERNAL_JOBS_BASE_URL=http://external-jobs.local:8000
+EMPLOYEE_SYSTEM_BASE_URL=http://employee-system.local:8000
+```
+
+Each service now uses its own configured host when sending API requests to the other systems.
 
 ## API flow
 
